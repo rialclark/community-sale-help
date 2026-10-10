@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="Illustration of a neighborhood map with pins on participating homes">
+  <defs>
+    <clipPath id="c"><rect x="0" y="0" width="520" height="420" rx="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="520" height="420" fill="#e9f3ef"/>
+    <!-- parks and blocks -->
+    <path d="M330 0h190v120c-60 10-120-10-190-40z" fill="#cfe6d8"/>
+    <circle cx="90" cy="345" r="70" fill="#cfe6d8"/>
+    <!-- streets -->
+    <g fill="none" stroke="#ffffff" stroke-linecap="round">
+      <path d="M-20 150 C120 130 260 170 540 140" stroke-width="26"/>
+      <path d="M-20 290 C160 270 330 310 540 280" stroke-width="22"/>
+      <path d="M150 -20 C140 120 170 260 150 440" stroke-width="22"/>
+      <path d="M370 -20 C385 140 360 280 380 440" stroke-width="22"/>
+      <path d="M150 210 C220 200 300 220 370 210" stroke-width="14"/>
+    </g>
+    <g fill="none" stroke="#d6e4e9" stroke-width="2" stroke-dasharray="8 10">
+      <path d="M-20 150 C120 130 260 170 540 140"/>
+      <path d="M-20 290 C160 270 330 310 540 280"/>
+    </g>
+    <!-- houses -->
+    <g fill="#ffffff" stroke="#b9cfd8" stroke-width="2">
+      <rect x="40" y="60" width="44" height="40" rx="6"/><rect x="200" y="50" width="44" height="40" rx="6"/><rect x="270" y="70" width="44" height="40" rx="6"/>
+      <rect x="40" y="200" width="44" height="40" rx="6"/><rect x="200" y="225" width="44" height="40" rx="6"/><rect x="290" y="232" width="44" height="40" rx="6"/>
+      <rect x="420" y="190" width="44" height="40" rx="6"/><rect x="430" y="330" width="44" height="40" rx="6"/><rect x="220" y="330" width="44" height="40" rx="6"/><rect x="300" y="345" width="44" height="40" rx="6"/>
+    </g>
+    <!-- route -->
+    <path d="M62 60 C120 40 180 40 222 50 S300 210 312 232 S420 200 442 190 S450 300 452 330" fill="none" stroke="#173a4f" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" opacity=".5"/>
+    <!-- pins -->
+    <g>
+      <g transform="translate(62 30)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#17855a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+      <g transform="translate(222 20)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#e8643a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+      <g transform="translate(312 202)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#17855a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+      <g transform="translate(442 160)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#e8643a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+      <g transform="translate(452 300)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#17855a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+      <g transform="translate(62 170)"><path d="M0 32 C-4 24 -14 16 -14 4 a14 14 0 0 1 28 0 C14 16 4 24 0 32Z" fill="#e8643a"/><circle cx="0" cy="4" r="5.5" fill="#fff"/></g>
+    </g>
+  </g>
+</svg>
