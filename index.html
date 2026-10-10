@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Sale Help | Your neighborhood garage sale, run for you</title>
+<meta name="description" content="A done for you community garage sale for HOAs and neighborhood groups in San Diego North County: signups, map, signs, flyers, and promotion.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%235f7f63'/><path d='M14 34 32 18l18 16v14H14z' fill='%23fff8ef'/><rect x='26' y='36' width='12' height='12' fill='%235f7f63'/></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Community Sale Help home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#5f7f63"/><path d="M14 34 32 18l18 16v14H14z" fill="#fff8ef"/><rect x="26" y="36" width="12" height="12" fill="#5f7f63"/></svg>
+      <span>Community Sale Help</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#handle">What I handle</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#request">Request a sale</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">For HOAs and neighborhood groups in San Diego North County</p>
+      <h1>Your neighborhood garage sale, run for you.</h1>
+      <p class="lede">Your neighbors want a community sale. Nobody on the board wants to run it. I'm Clark Richardson, based in Oceanside, and I'll plan and run it with you.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#request">Request a sale</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="handle" class="section">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Done for you</p>
+        <h2>What I handle</h2>
+        <ul class="checks">
+          <li>Homeowner signups through a simple online form</li>
+          <li>A shared map of every participating home</li>
+          <li>Yard signs for the neighborhood entrances and corners</li>
+          <li>Flyers for residents and for shoppers</li>
+          <li>Promotion in the places local shoppers already look</li>
+        </ul>
+        <p>Your board or group picks the date and gives the go ahead. I take care of the planning and the legwork from there.</p>
+      </div>
+      <aside class="buy-card" aria-label="Service area">
+        <p class="eyebrow">Service area</p>
+        <h3 style="margin-top:0">San Diego North County</h3>
+        <p class="small">Oceanside, Vista, Carlsbad, and nearby communities.</p>
+        <a class="btn btn-primary" href="#request">Check your neighborhood</a>
+      </aside>
+    </div>
+  </section>
+
+  <section id="how" class="section section-warm">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>One Saturday, planned over about 8 weeks</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Send a request</h3>
+          <p>Fill out the short form below with your community and a month you have in mind.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Pick the date together</h3>
+          <p>We talk through a Saturday about 8 weeks out and which streets to include.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Signups and promotion</h3>
+          <p>Residents sign up with a short form, each home goes on the map, and flyers and posts go out.</p>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <h3>Sale day</h3>
+          <p>Signs are up, the map is shared, and shoppers know where to go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request" class="section">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Get started</p>
+        <h2>Request a community sale</h2>
+        <p>Tell me a little about your neighborhood and I'll get back to you. Sending a request doesn't commit your HOA to anything.</p>
+        <p class="area"><strong>Service area:</strong> San Diego North County, including Oceanside, Vista, Carlsbad, and nearby communities.</p>
+      </div>
+      <div class="form-card">
+        <!-- PLACEHOLDER: replace #HOA_FORM_ACTION with a real endpoint (Formspree URL, or swap this form for a Google Form link). -->
+        <form id="hoa-form" action="#HOA_FORM_ACTION" method="POST">
+          <label>HOA or community name
+            <input type="text" name="community" required autocomplete="organization">
+          </label>
+          <label>Your name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <div class="row">
+            <label>About how many homes
+              <input type="number" name="homes" min="1" inputmode="numeric">
+            </label>
+            <label>Preferred month
+              <select name="month">
+                <option value="">Choose one</option>
+                <option>January</option><option>February</option><option>March</option>
+                <option>April</option><option>May</option><option>June</option>
+                <option>July</option><option>August</option><option>September</option>
+                <option>October</option><option>November</option><option>December</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">Send request</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section section-warm">
+    <div class="wrap narrow">
+      <p class="eyebrow">Questions</p>
+      <h2>FAQ</h2>
+      <details>
+        <summary>Who runs the sale?</summary>
+        <p>I do. I'm Clark Richardson, and I live in Oceanside. You'll deal with me directly.</p>
+      </details>
+      <details>
+        <summary>Does every home have to take part?</summary>
+        <p>No. Signing up is up to each household. Only the homes that sign up go on the map.</p>
+      </details>
+      <details>
+        <summary>What does our board need to do?</summary>
+        <p>Pick a date, give the go ahead, and help get the word to residents through your usual channels if you can.</p>
+      </details>
+      <details>
+        <summary>Which areas do you cover?</summary>
+        <p>San Diego North County, including Oceanside, Vista, Carlsbad, and nearby communities. If you're close by and not sure, send a request and ask.</p>
+      </details>
+      <details>
+        <summary>Is this a site for finding garage sales near me?</summary>
+        <p>No. This is for HOAs and neighborhood groups who want a community sale organized for them.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="brand brand-footer">Community Sale Help</p>
+      <p class="small">Community garage sales for HOAs and neighborhood groups in San Diego North County.</p>
+      <p class="small">Clark Richardson, Oceanside, California</p>
+      <p class="small agent-link">Real estate agent? See the kit for running your own sale at <a href="https://garagesaleagents.com" style="color:#f2c4b6">garagesaleagents.com</a>.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#handle">What I handle</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#request">Request a sale</a>
+    </nav>
+  </div>
+  <div class="wrap"><p class="small copy">&copy; 2026 Community Sale Help</p></div>
+</footer>
+
+<script>
+(function () {
+  var status = document.getElementById('form-status');
+  var form = document.getElementById('hoa-form');
+  form.addEventListener('submit', function (e) {
+    if (form.getAttribute('action').indexOf('#') === 0) {
+      e.preventDefault();
+      status.textContent = 'Thanks. This form is not connected yet, so nothing was sent. Please check back soon.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
