@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Community Sale Help | Your neighborhood garage sale, run for you</title>
-<meta name="description" content="A done for you community garage sale for HOAs and neighborhood groups anywhere in the US: signups, map, signs, flyers, and promotion.">
+<title>HOA Community Garage Sale, Done for You | Community Sale Help</title>
+<meta name="description" content="We run your HOA community garage sale for you, anywhere in the US: signups, the map, signs, flyers and promotion, so your board does not have to.">
 <meta name="theme-color" content="#173a4f">
 <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunitosans.woff2" as="font" type="font/woff2" crossorigin>
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://communitysalehelp.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Community Sale Help">
-<meta property="og:title" content="Your neighborhood garage sale, run for you">
+<meta property="og:title" content="HOA Community Garage Sale, Done for You">
 <meta property="og:description" content="Signups, the map, signs, flyers, and promotion handled for HOAs and neighborhood groups anywhere in the US.">
 <meta property="og:url" content="https://communitysalehelp.com/">
 <meta property="og:image" content="https://communitysalehelp.com/assets/og.png">
@@ -173,8 +173,8 @@
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">For HOAs and neighborhood groups across the US</p>
-        <h1>Your neighborhood garage sale, run for you.</h1>
-        <p class="lede">Your neighbors want a community sale. Nobody on the board wants to run it. We'll plan and run it with you, wherever your neighborhood is.</p>
+        <h1>Your HOA community garage sale, run for you.</h1>
+        <p class="lede">We run HOA community garage sales for boards and neighborhood groups. Your neighbors want a community sale. Nobody on the board wants to run it. We'll plan and run it with you, wherever your neighborhood is.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#request"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg> Request a sale</a>
           <a class="btn btn-outline" href="#how">See how it works</a>
@@ -434,6 +434,37 @@
       status.textContent = FAIL;
     }).then(function () { button.disabled = false; button.innerHTML = label; });
   });
+})();
+</script>
+<nav class="callbar" aria-label="Call or text us">
+  <a href="tel:+16027670428" data-track="call_tap">Call (602) 767-0428</a>
+  <a href="sms:+16027670428" data-track="text_tap">Text us</a>
+</nav>
+<script>
+/* GA4 hook: stays off until an ID is set below, for example "G-XXXXXXX". */
+window.GA4_ID = "";
+(function(){
+  var id = window.GA4_ID;
+  function track(name, params){ if (window.gtag) window.gtag("event", name, params || {}); }
+  window.siteTrack = track;
+  if (id) {
+    var s = document.createElement("script"); s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + id; document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", id);
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a"); if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (h.indexOf("tel:") === 0) track("call_tap", {link_url: h});
+    else if (h.indexOf("sms:") === 0) track("text_tap", {link_url: h});
+    else if (h.indexOf("mailto:") === 0) track("email_tap", {link_url: h});
+    else if (a.classList.contains("btn")) track("cta_tap", {link_text: (a.textContent || "").trim().slice(0, 60)});
+  }, true);
+  document.addEventListener("submit", function(e){
+    track("form_submit", {form_id: e.target.id || "form"});
+  }, true);
 })();
 </script>
 </body>
